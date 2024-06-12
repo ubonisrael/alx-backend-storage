@@ -6,13 +6,13 @@
 --    UPDATE users SET average_score = avg_score WHERE id = user_id;
 DELIMITER $$
 CREATE PROCEDURE ComputeAverageScoreForUser(
-    IN user_id VARCHAR(255)
+    IN userId VARCHAR(255)
 )
 BEGIN
 
     UPDATE users SET average_score = (
-        SELECT AVG(score) FROM corrections WHERE user_id = user_id
-    ) WHERE id = user_id;
+        SELECT AVG(score) FROM corrections WHERE user_id = userId
+    ) WHERE id = userId;
 
 END $$
 DELIMITER ;
