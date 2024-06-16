@@ -43,6 +43,6 @@ if __name__ == "__main__":
     print("{} logs".format(count))
     print("Methods:")
     for k, v in methods_dict.items():
-        print("    method {}: {}".format(k, v))
-        # print("\tmethod {}: {}".format(k, v))
+        # print("    method {}: {}".format(k, v))
+        print("\tmethod {}: {}".format(k, v))
     print("{} status check".format(get_status_path))
