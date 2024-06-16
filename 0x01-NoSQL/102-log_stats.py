@@ -34,7 +34,7 @@ if __name__ == "__main__":
     print("{} logs".format(count))
     print("Methods:")
     for k, v in methods_dict.items():
-        print("    method {}: {}".format(k, v))
+        print("\tmethod {}: {}".format(k, v))
     print("{} status check".format(get_status_path))
 
     print('IPs:')
@@ -54,4 +54,4 @@ if __name__ == "__main__":
     for request_log in request_logs:
         ip = request_log['_id']
         ip_requests_count = request_log['totalRequests']
-        print('    {}: {}'.format(ip, ip_requests_count))
+        print('\t{}: {}'.format(ip, ip_requests_count))
