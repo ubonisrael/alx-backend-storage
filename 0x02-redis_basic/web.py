@@ -26,7 +26,7 @@ def cacher(method: Callable) -> Callable:
             return result.decode('utf-8')
         result = method(url)
         redis_store.set(f'count:{url}', 0)
-        redis_store.setex(f'result:{url}', timedelta(seconds=10), value=result)
+        redis_store.setex(f'result:{url}', timedelta(seconds=10), result)
         return result
     return wrapper
 

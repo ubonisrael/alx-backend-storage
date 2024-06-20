@@ -69,7 +69,7 @@ class Cache:
     """class to be used for caching requests"""
     def __init__(self) -> None:
         """initializes a Cache instance"""
-        self._redis: redis.Redis = redis.Redis()
+        self._redis = redis.Redis()
         self._redis.flushdb()
 
     @count_calls
